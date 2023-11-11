@@ -31,28 +31,26 @@
  *
  */
 
-
+console.clear;
 // Data storage - Initialize the array of To Do items
 //
 // NOTE:
 //
 // - You must use the following object literal structure when creating new todo items
 // - The ID (id) of each todo item must be unique (you can use the length of the array as the ID or generate a random number)
-let todo =
- {
-  id: 0,
-  text: "This is a todo item",
-  completed: false,
- };
+//let todo =
+// {
+//  id: 0,
+//  text: "This is a todo item",
+//  completed: false,
+// };
 
- console.log(todo);
+// console.log(todo);
 
 // Initialise an empty array with the variable name todoItems
 let todoItems = [];
 let idCounter = 0;
 
-
-//todoItems = [{ id: 0, text: "This is a todo item", completed: false}];
 
 // Function to add a todo to the list
 // It should accept a string as a parameter (text of the todo item)
@@ -65,9 +63,12 @@ console.log("todoItems length is: ", todoItems.length);
 function addToDoItem(text) {
   // Implement the logic to add a task here
   
-  todo.id = idCounter;
-  todo.text = text;
-  todo.completed = false;
+  let todo =
+  {
+    id: idCounter,
+    text: text,
+    completed: false,
+  };
 
   todoItems.push(todo);
 
@@ -77,8 +78,9 @@ function addToDoItem(text) {
 }
 
 console.log(todoItems);
-addToDoItem("Test item 1");
-addToDoItem("Test item 2");
+//addToDoItem("Test item 1");
+console.log(todoItems);
+//addToDoItem("Test item 2");
 console.log(todoItems);
 
 // Function to remove a todo to the list
