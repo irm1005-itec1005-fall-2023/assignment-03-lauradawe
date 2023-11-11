@@ -92,16 +92,16 @@ function removeToDoItem(todoId) {
   // Implement the logic to add a task here
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
-      for (let j = i; j < (todoItems.length - i); j = j + 1)
+      for (let j = i; j < (todoItems.length - i + 1); j = j + 1)
       {
-        todoItems[j].id = todoItems[j+1].id;
+        todoItems[j] = todoItems[j+1];
       }
       //const x = todoItems.splice(i,1);
     }
-    //else
-    //{
-      // console.log("That id does not exist!")
-    //}
+    else
+    {
+       console.log("That id does not exist!")
+    }
 }
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
