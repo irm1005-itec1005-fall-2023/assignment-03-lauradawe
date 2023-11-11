@@ -49,6 +49,9 @@ const todoItem =
 let todoItems = [];
 let idCounter = 0;
 
+
+todoItems = [{ id: 0, text: "This is a todo item", completed: false}];
+
 // Function to add a todo to the list
 // It should accept a string as a parameter (text of the todo item)
 // and it should add a new todo item to the todoItems array
