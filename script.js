@@ -40,9 +40,9 @@
 // - The ID (id) of each todo item must be unique (you can use the length of the array as the ID or generate a random number)
 let todo =
  {
-    id: 0,
-   text: "This is a todo item",
-   completed: false,
+  id: 0,
+  text: "This is a todo item",
+  completed: false,
  };
 
  console.log(todo);
@@ -65,10 +65,11 @@ console.log("todoItems length is: ", todoItems.length);
 function addToDoItem(text) {
   // Implement the logic to add a task here
   
-  todoItems[todoItems.length] = todo;
-  todoItems[todoItems.length].id = idCounter;
-  todoItems[todoItems.length].text = text;
-  todoItems[todoItems.length].completed = false;
+  todo.id = idCounter;
+  todo.text = text;
+  todo.completed = false;
+
+  todoItems.push(todo);
 
   idCounter = idCounter + 1;
 
@@ -77,6 +78,7 @@ function addToDoItem(text) {
 
 console.log(todoItems);
 addToDoItem("Test item 1");
+addToDoItem("Test item 2");
 console.log(todoItems);
 
 // Function to remove a todo to the list
