@@ -92,7 +92,7 @@ function removeToDoItem(todoId) {
   // Implement the logic to add a task here
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
-      for (let j = i; j < (todoItems.length - i + 1); j = j + 1)
+      for (let j = i; j < (todoItems.length - i); j = j + 1)
       {
         todoItems[j] = todoItems[j+1];
       }
