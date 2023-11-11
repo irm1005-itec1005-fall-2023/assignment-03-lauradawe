@@ -38,14 +38,16 @@
 //
 // - You must use the following object literal structure when creating new todo items
 // - The ID (id) of each todo item must be unique (you can use the length of the array as the ID or generate a random number)
-//
-// {
-//   id: 0,
-//   text: "This is a todo item",
-//   completed: false,
-// }
+const todoItem =
+ {
+    id: 0,
+   text: "This is a todo item",
+   completed: false,
+ };
 
 // Initialise an empty array with the variable name todoItems
+let todoItems = [];
+let idCounter = 0;
 
 // Function to add a todo to the list
 // It should accept a string as a parameter (text of the todo item)
@@ -55,8 +57,14 @@
 // the function does not need to return anything
 function addToDoItem(text) {
   // Implement the logic to add a task here
+  
+  todoItem[todoItem.length].id = idCounter;
+  todoItem[todoItem.length].text = text;
+  todoItem[todoItem.length].completed = false;
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  idCounter = idCounter + 1;
+
+  // console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
 // Function to remove a todo to the list
