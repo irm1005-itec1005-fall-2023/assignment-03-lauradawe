@@ -38,12 +38,14 @@
 //
 // - You must use the following object literal structure when creating new todo items
 // - The ID (id) of each todo item must be unique (you can use the length of the array as the ID or generate a random number)
-const todoItem =
+let todo =
  {
     id: 0,
    text: "This is a todo item",
    completed: false,
  };
+
+ console.log(todo);
 
 // Initialise an empty array with the variable name todoItems
 let todoItems = [];
@@ -63,6 +65,7 @@ console.log("todoItems length is: ", todoItems.length);
 function addToDoItem(text) {
   // Implement the logic to add a task here
   
+  todoItems[todoItems.length] = todo;
   todoItems[todoItems.length].id = idCounter;
   todoItems[todoItems.length].text = text;
   todoItems[todoItems.length].completed = false;
