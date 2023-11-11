@@ -58,9 +58,9 @@ let idCounter = 0;
 function addToDoItem(text) {
   // Implement the logic to add a task here
   
-  todoItem[todoItem.length].id = idCounter;
-  todoItem[todoItem.length].text = text;
-  todoItem[todoItem.length].completed = false;
+  todoItems[todoItems.length].id = idCounter;
+  todoItems[todoItems.length].text = text;
+  todoItems[todoItems.length].completed = false;
 
   idCounter = idCounter + 1;
 
