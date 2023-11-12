@@ -136,7 +136,9 @@ function markToDoItemAsCompleted(todoId) {
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
+
   let isAMatch = false;
+
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
       for (let j = i; j < todoItems.length; j = j + 1)
@@ -161,22 +163,25 @@ function deleteToDoItem(todoId) {
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
 
-  for (let i = 0; i < todoItems.length; i = i + 1) {
-    if (todoItems[i].id === todoId) {
-      for (let j = i; j < todoItems.length; j = j + 1)
-      {
-        todoItems[j] = todoItems[j+1];
-      }
-      todoItems.pop();
-      isAMatch = true;
+  let isAMatch = false;
 
-      //const x = todoItems.splice(i,1);
+  for (let i = 0; i < todoItems.length; i = i + 1) {
+    if (todoItems[i].completed === true) {
+      //for (let j = i; j < todoItems.length; j = j + 1)
+     // {
+     //   todoItems[j] = todoItems[j+1];
+     // }
+     // todoItems.pop();
+
+      const x = todoItems.splice(i,1);
+
+      isAMatch = true;
     }    
   }
   
   return isAMatch;
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
 // You can write your own tests here if you would like to test
