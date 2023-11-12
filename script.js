@@ -92,17 +92,16 @@ function removeToDoItem(todoId) {
   // Implement the logic to add a task here
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
-      for (let j = i; j < (todoItems.length - i); j = j + 1)
+      for (let j = i; j < todoItems.length; j = j + 1)
       {
         todoItems[j] = todoItems[j+1];
       }
+      todoItems.pop();
+      //console.log(todoItems);
       //const x = todoItems.splice(i,1);
     }
-    else
-    {
-       console.log("That id does not exist!")
-    }
-}
+    
+  }
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
@@ -113,8 +112,20 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
+  for (let i = 0; i < todoItems.length; i = i + 1) {
+    if (todoItems[i].id === todoId) {
+      todoItems[i].completed = true;
+      //for (let j = i; j < (todoItems.length - i + 1); j = j + 1)
+     // {
+     //   todoItems[j] = todoItems[j+1];
+     // }
+        console.log(todoItems);
+      
+    }
+    
+}
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
 // Function to delete a task from the array
@@ -125,8 +136,23 @@ function markToDoItemAsCompleted(todoId) {
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
+  let isAMatch = false;
+  for (let i = 0; i < todoItems.length; i = i + 1) {
+    if (todoItems[i].id === todoId) {
+      for (let j = i; j < todoItems.length; j = j + 1)
+      {
+        todoItems[j] = todoItems[j+1];
+      }
+      todoItems.pop();
+      isAMatch = true;
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+      //const x = todoItems.splice(i,1);
+    }    
+  }
+  
+  return isAMatch;
+
+  //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
 // Function to clear all completed tasks
@@ -134,6 +160,21 @@ function deleteToDoItem(todoId) {
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
+
+  for (let i = 0; i < todoItems.length; i = i + 1) {
+    if (todoItems[i].id === todoId) {
+      for (let j = i; j < todoItems.length; j = j + 1)
+      {
+        todoItems[j] = todoItems[j+1];
+      }
+      todoItems.pop();
+      isAMatch = true;
+
+      //const x = todoItems.splice(i,1);
+    }    
+  }
+  
+  return isAMatch;
 
   console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
