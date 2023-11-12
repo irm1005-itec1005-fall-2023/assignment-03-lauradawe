@@ -114,12 +114,8 @@ function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
+      
       todoItems[i].completed = true;
-      //for (let j = i; j < (todoItems.length - i + 1); j = j + 1)
-     // {
-     //   todoItems[j] = todoItems[j+1];
-     // }
-        console.log(todoItems);
       
     }
     
@@ -191,3 +187,15 @@ function clearCompletedTasks() {
 //  console.log(todoItems); // This should show the todo item you added
 //  removeToDoItem(0); // This should remove the todo item with ID 0 from the array
 //  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed
+
+for (let i = 0; i < 10; i = i + 1) {
+  addToDoItem(`Test ToDo ${i}`);
+}
+markToDoItemAsCompleted(3);
+markToDoItemAsCompleted(5);
+markToDoItemAsCompleted(8);
+
+clearCompletedTasks();
+
+console.log(todoItems);  
+
