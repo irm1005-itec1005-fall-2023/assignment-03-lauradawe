@@ -31,7 +31,6 @@
  *
  */
 
-console.clear;
 // Data storage - Initialize the array of To Do items
 //
 // NOTE:
@@ -44,8 +43,7 @@ console.clear;
 //  text: "This is a todo item",
 //  completed: false,
 // };
-
-// console.log(todo);
+console.clear;
 
 // Initialise an empty array with the variable name todoItems
 const todoItems = [];
@@ -58,7 +56,8 @@ let idCounter = 0;
 // The todo item should have the structure shown above
 // It's really important that you have a unique ID for each todo item that you push onto the array
 // the function does not need to return anything
-console.log("todoItems length is: ", todoItems.length);
+
+//console.log("todoItems length is: ", todoItems.length);
 
 function addToDoItem(text) {
   // Implement the logic to add a task here
@@ -90,6 +89,7 @@ console.log(todoItems);
 // the function does not need to return anything
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
+
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
       for (let j = i; j < todoItems.length; j = j + 1)
@@ -112,14 +112,12 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
+
   for (let i = 0; i < todoItems.length; i = i + 1) {
     if (todoItems[i].id === todoId) {
-      
       todoItems[i].completed = true;
-      
     }
-    
-}
+  }
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
@@ -187,7 +185,7 @@ function clearCompletedTasks() {
 //  console.log(todoItems); // This should show the todo item you added
 //  removeToDoItem(0); // This should remove the todo item with ID 0 from the array
 //  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed
-
+/*
 for (let i = 0; i < 10; i = i + 1) {
   addToDoItem(`Test ToDo ${i}`);
 }
@@ -197,5 +195,6 @@ markToDoItemAsCompleted(8);
 
 clearCompletedTasks();
 
+*/
 console.log(todoItems);  
 
